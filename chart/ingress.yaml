@@ -11,8 +11,8 @@ spec:
       - path: /parthpower.servicea.v1.EchoA
         backend:
           serviceName: service-a
-          servicePort: 50051
+          servicePort: grpc
       - path: /parthpower.serviceb.v1.EchoB
         backend:
           serviceName: service-b
-          servicePort: 50051
+          servicePort: grpc

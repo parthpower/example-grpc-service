@@ -33,5 +33,6 @@ spec:
   selector:
     app: service-b
   ports:
-  - port: 50051
+  - name: grpc
+    port: 50051
     targetPort: 50051
