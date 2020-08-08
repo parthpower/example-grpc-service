@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = ".;servicebv1";
+
+package parthpower.serviceb.v1;
+
+service EchoB {
+    rpc Flip (FlipRequest) returns (FlipResponse) {};
+}
+
+message FlipRequest {
+    string msg = 1;
+    int32 a = 2;
+}
+
+message FlipResponse {
+    string msg = 1;
+    int32 rcode = 2;
+}

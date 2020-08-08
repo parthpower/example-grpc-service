@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: service-ingress
+  annotations:
+    ingress.kubernetes.io/protocol: "h2c"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /parthpower.servicea.v1.EchoA
+        backend:
+          serviceName: service-a
+          servicePort: 50051
+      - path: /parthpower.serviceb.v1.EchoB
+        backend:
+          serviceName: service-b
+          servicePort: 50051

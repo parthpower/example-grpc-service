@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = ".;serviceav1";
+
+package parthpower.servicea.v1;
+
+service EchoA {
+    rpc Ping (PingRequest) returns (PingResponse) {};
+}
+
+message PingRequest {
+    string msg = 1;
+}
+
+message PingResponse {
+    string msg = 1;
+    int32 rcode = 2;
+}
